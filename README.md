@@ -17,7 +17,7 @@ Then submit a pull request.
 
 Until DNS is configured, add this to your hosts file:
 
-    dul-doi-staging.eventdata.crossref.org:159.69.10.84
+    159.69.10.84 dul-doi-staging.eventdata.crossref.org
 
 Then:
 
