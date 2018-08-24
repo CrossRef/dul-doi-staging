@@ -1,4 +1,4 @@
-(defproject dul-doi-staging "0.1.0-SNAPSHOT"
+(defproject dul-doi-staging "0.1.0"
   :description "Distributed Usage Logging DOI Staging server"
   :url "http://eventdata.crossref.org/"
   :license {:name "MIT License"
