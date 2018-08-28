@@ -15,7 +15,7 @@ Then submit a pull request.
 
 ## To run
 
-  DOI_DUL_STAGING_PORT=9438 lein run
+    DOI_DUL_STAGING_PORT=9438 lein run
 
 Then 
 
