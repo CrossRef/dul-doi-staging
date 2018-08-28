@@ -8,18 +8,22 @@ Edit resources/mappings.json and provide an entry like this. The prefix of the D
 
 E.g.:
 
-  {"10.5555", "http://example.com",
-   "10.1016": "https://api.elsevier.com/content/usage/doi/"}
+    {"10.5555", "http://example.com",
+     "10.1016": "https://api.elsevier.com/content/usage/doi/"}
 
 Then submit a pull request.
 
-## To run
+## To use
 
     DOI_DUL_STAGING_PORT=9438 lein run
 
-Then 
+Until DNS is configured, add this to your hosts file:
 
-  curl --verbose http://localhost:9438/10.5555/12345678
+    159.69.10.84 dul-doi-staging.eventdata.crossref.org
+
+Then:
+
+    curl --verbose https://dul-doi-staging.eventdata.crossref.org/10.5555/12345678
 
 See the Location field:
 
@@ -41,9 +45,15 @@ See the Location field:
     < Vary: Accept
     < Date: Fri, 24 Aug 2018 10:58:31 GMT
 
-Or, the real instance
+## To run for local development
 
-  curl --verbose https://dul-doi-staging.eventdata.crossref.org/10.5555/12345678
+    DOI_DUL_STAGING_PORT=9438 lein run
+
+Then 
+
+    curl --verbose http://localhost:9438/10.5555/12345678
+
+
 
 ## License
 
